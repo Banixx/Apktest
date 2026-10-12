@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dial_background"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Retro Wählscheiben-Basis -->
+    <FrameLayout
+        android:id="@+id/dialContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/retro_dial_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintHeight_percent="0.9">
+
+        <!-- Drehbare Scheibe -->
+        <ImageView
+            android:id="@+id/dialWheel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/dial_wheel"
+            android:adjustViewBounds="true"
+            android:rotation="0"
+            android:pivotX="50%"
+            android:pivotY="50%" />
+
+        <!-- Zahlen auf der Wählscheibe (1-0) -->
+        <TextView
+            android:id="@+id/dialNumber1"
+            style="@style/DialNumberText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:layout_gravity="center"
+            android:layout_x="200dp"
+            android:layout_y="100dp" />
+
+        <TextView
+            android:id="@+id/dialNumber2"
+            style="@style/DialNumberText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:layout_gravity="center"
+            android:layout_x="250dp"
+            android:layout_y="150dp" />
+
+        <TextView
+            android:id="@+id/dialNumber3"
+            style="@style/DialNumberText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:layout_gravity="center"
+            android:layout_x="230dp"
+            android:layout_y="230dp" />
+
+        <TextView
+            android:id="@+id/dialNumber4"
+            style="@style/DialNumberText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4"
+            android:layout_gravity="center"
+            android:layout_x="150dp"
+            android:layout_y="280dp" />
+
+        <TextView
+            android:id="@+id/dialNumber5"
+            style="@style/DialNumberText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:layout_gravity="center"
+            android:layout_x="100dp"
+            android:layout_y="250dp" />
+
+        <TextView
+            android:id="@+id/dialNumber6"
+            style="@style/DialNumberText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6"
+            android:layout_gravity="center"
+            android:layout_x="120dp"
+            android:layout_y="180dp" />
+
+        <TextView
+            android:id="@+id/dialNumber7"
+            style="@style/DialNumberText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7"
+            android:layout_gravity="center"
+            android:layout_x="180dp"
+            android:layout_y="120dp" />
+
+        <TextView
+            android:id="@+id/dialNumber8"
+            style="@style/DialNumberText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8"
+            android:layout_gravity="center"
+            android:layout_x="220dp"
+            android:layout_y="180dp" />
+
+        <TextView
+            android:id="@+id/dialNumber9"
+            style="@style/DialNumberText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9"
+            android:layout_gravity="center"
+            android:layout_x="280dp"
+            android:layout_y="220dp" />
+
+        <TextView
+            android:id="@+id/dialNumber0"
+            style="@style/DialNumberText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:layout_gravity="center"
+            android:layout_x="200dp"
+            android:layout_y="320dp" />
+
+        <!-- * und # Tasten -->
+        <TextView
+            android:id="@+id/dialNumberStar"
+            style="@style/DialNumberText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:layout_gravity="center"
+            android:layout_x="100dp"
+            android:layout_y="100dp" />
+
+        <TextView
+            android:id="@+id/dialNumberHash"
+            style="@style/DialNumberText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#"
+            android:layout_gravity="center"
+            android:layout_x="280dp"
+            android:layout_y="300dp" />
+
+        <!-- Mittelpunkt der Wählscheibe -->
+        <View
+            android:id="@+id/dialCenter"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/dial_center"
+            android:layout_gravity="center" />
+
+        <!-- Finger-Loch Indikator -->
+        <View
+            android:id="@+id/fingerHole"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@color/dial_text"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp" />
+
+        <!-- Berührungsfläche zum Drehen -->
+        <View
+            android:id="@+id/touchArea"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+    <!-- Anzeige für die gewählte Nummer -->
+    <TextView
+        android:id="@+id/numberDisplay"
+        style="@style/NumberDisplayText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:background="@color/black"
+        android:padding="16dp"
+        android:minHeight="60dp"
+        app:layout_constraintTop_toBottomOf="@id/dialContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.1" />
+
+    <!-- Anruf-Button -->
+    <Button
+        android:id="@+id/callButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Anrufen"
+        android:textColor="@color/dial_text"
+        android:backgroundTint="@color/green"
+        android:padding="16dp"
+        android:enabled="false"
+        app:layout_constraintEnd_toEndOf="@id/numberDisplay"
+        app:layout_constraintStart_toStartOf="@id/numberDisplay"
+        app:layout_constraintBottom_toBottomOf="@id/numberDisplay"
+        app:layout_constraintTop_toTopOf="@id/numberDisplay" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

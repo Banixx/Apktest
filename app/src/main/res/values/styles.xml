@@ -1,0 +1,23 @@
+<resources>
+    <style name="NumberDisplayText">
+        <item name="android:textSize">36sp</item>
+        <item name="android:textColor">@color/number_display</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+    </style>
+    
+    <style name="DialNumberText">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/dial_text</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+    </style>
+    
+    <style name="DialButton">
+        <item name="android:background">@drawable/dial_button_bg</item>
+        <item name="android:textColor">@color/dial_text</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+</resources>

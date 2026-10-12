@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/dial_center" />
+    <stroke
+        android:width="3dp"
+        android:color="@color/dial_text" />
+    <corners android:radius="30dp" />
+    <size
+        android:width="60dp"
+        android:height="60dp" />
+</shape>
